@@ -1,0 +1,4 @@
+pillow
+fpdf2
+pandas
+customtkinter

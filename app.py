@@ -9,7 +9,6 @@ import pandas as pd
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import customtkinter as ctk
-# Adicione junto com as outras importações
 from fpdf import FPDF
 
 
