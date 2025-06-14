@@ -123,7 +123,7 @@ class PAS(ctk.CTk):
         # Logo
         self.logo_label = ctk.CTkLabel(
             self.sidebar,
-            text="PAS",
+            text="System Automate PRO",
             font=ctk.CTkFont(size=20, weight="bold")
         )
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
@@ -137,9 +137,8 @@ class PAS(ctk.CTk):
             ("Utilitários", self.show_utilities_page),
             ("PDF", self.show_pdf_page),  # Nova opção
             ("Conversor de Imagens", self.show_image_converter_page),  # Nova opção
-
-            ("Limpeza", self.show_cleanup_page),
             ("Anotações", self.show_notes_page),
+            ("Limpeza", self.show_cleanup_page),
             ("Comandos", self.show_commands_page),
             ("Guia", self.show_guide_page)
         ]
@@ -180,7 +179,7 @@ class PAS(ctk.CTk):
         # Título
         title = ctk.CTkLabel(
             self.main_frame,
-            text="Bem-vindo ao Personal Automation System",
+            text="Sistema de Automação Pessoal",
             font=ctk.CTkFont(size=24, weight="bold")
         )
         title.pack(pady=(20, 10))
@@ -410,7 +409,6 @@ class PAS(ctk.CTk):
 
         except Exception as e:
             messagebox.showerror("Erro", f"Falha ao criar projeto: {e}")
-
     def show_image_converter_page(self):
         """Exibe a página de conversão de imagens"""
         self.clear_main_frame()
@@ -607,7 +605,6 @@ class PAS(ctk.CTk):
                     ico_entry.grid_remove()
         except Exception as e:
             print(f"Erro ao atualizar visibilidade: {e}")
-
     def convert_image(self):
         """Converte a imagem para o formato selecionado"""
         try:
@@ -711,7 +708,6 @@ class PAS(ctk.CTk):
 
         except Exception as e:
             messagebox.showerror("Erro", f"Falha na conversão: {str(e)}")
-
     def show_pdf_page(self):
         """Exibe a página de criação de documentos PDF"""
         self.clear_main_frame()
@@ -2788,7 +2784,6 @@ class PAS(ctk.CTk):
 
             except Exception as e:
                 messagebox.showerror("Erro", f"Falha ao redefinir dados: {e}")
-
     def validate_font_selection(self):
         """Valida se a fonte selecionada suporta os caracteres do texto"""
         try:
