@@ -342,6 +342,8 @@ class PAS(ctk.CTk):
         dir_entry = self.project_entries["Diretório base:"]
         dir_entry.delete(0, "end")
         dir_entry.insert(0, self.settings["default_dir"])
+
+
     def create_project(self):
         """Cria um novo projeto com base nos dados do formulário"""
         try:
@@ -409,6 +411,8 @@ class PAS(ctk.CTk):
 
         except Exception as e:
             messagebox.showerror("Erro", f"Falha ao criar projeto: {e}")
+
+
     def show_image_converter_page(self):
         """Exibe a página de conversão de imagens"""
         self.clear_main_frame()

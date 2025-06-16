@@ -1,0 +1,115 @@
+Conversão de Imagens:
+SVG erro
+demais conversões ok
+----------------
+Comandos:
+sem funcionalidade, opção para adicionar, mais nao adicIona nada no sistema.
+----------------------------------------
+Conversor PDF
+nao esta Funcional, esta apenas simulação
+Quero a função 100% funcional
+------------------------------
+planilhas
+nao exporta em xlsx
+----------------------------
+
+ABA DEVELOPER
+Crie uma interface na aba "Developer" do meu sistema de automação pessoal e produtividade (feito em PyQt6/PySide6)
+que permita ao usuário criar novos projetos de desenvolvimento frontend e backend com suporte real a instalação
+de dependências via terminal integrado embutido na própria aba.
+
+Objetivo:
+Permitir que projetos com dependências (como React, Vite, Vue, Node.js, Python etc)
+ sejam criados de forma automatizada dentro do sistema, usando comandos reais via terminal (ex: npm, npx, pip, etc)
+no diretório escolhido pelo usuário, sem precisar sair da interface.
+🧱 Estrutura da Aba Developer (Nova Versão)
+Campo: Nome do Projeto
+Campo: Tipo do Projeto (dropdown com opções: React (Vite), React (Create-React-App), Vue, Node.js, Python, HTML/CSS/JS, Outro)
+Campo: Diretório de destino (com botão "Selecionar Pasta")
+Botão: Criar Projeto
+Terminal Integrado abaixo do botão, que exibe a execução dos comandos (stdout, stderr, logs em tempo real)
+
+⚙️ Lógica de Criação por Tipo:
+Tipo do Projeto	Comando executado no terminal integrado
+React (Vite)	npm create vite@latest nome-projeto -- --template react
+React (CRA)	npx create-react-app nome-projeto
+Vue	npm create vue@latest
+Node.js	npm init -y + criação de estrutura básica (index.js, package.json)
+Python	python -m venv venv + instalação de dependências
+HTML/CSS/JS	Criação de arquivos básicos (sem terminal)
+Outro	Apenas cria diretório vazio com estrutura mínima
+
+🖥️ Terminal Integrado
+Terminal deve rodar os comandos dentro da interface principal, abaixo do botão "Criar Projeto".
+Deve capturar e exibir:
+Saída padrão (stdout)
+Erros (stderr)
+Logs da execução (linha a linha, como num terminal real)
+Deve indicar sucesso ou erro ao final.
+Se possível, permitir cancelar execução e mostrar progresso.
+
+🧠 Extras (se quiser ir além)
+Permitir ao usuário customizar os comandos antes de executar (avançado).
+Incluir opção de usar Yarn, pnpm ou npm.
+Mostrar sugestões de templates para projetos (ex: Vite + TypeScript, CRA + Tailwind).
+Salvar histórico de comandos usados.
+
+--projetos python ter opção de adicionar as dependencias do arquivo de requerimentos
+--------------------------------------
+adicionar função:
+Limpeza do Sistema
+Limpar diretórios como:
+./temp/
+./cache/
+./logs/
+./relatorios_temp/
+
+---------------------------
+Corrija a aba “Projetos” do meu sistema de automação pessoal para produtividade.
+Atualmente, há dois problemas:
+❌ Problema 1 – Pasta raiz não é criada corretamente
+O sistema cria apenas as subpastas informadas no campo "Subpastas", dentro do diretório base.
+Porém, ele não cria a pasta raiz com o nome do projeto, o que deixa as subpastas soltas no diretório.
+
+✅ Correção esperada:
+O campo “Nome do Projeto” deve criar uma pasta raiz com esse nome
+Todas as subpastas definidas devem ser criadas dentro dessa pasta raiz
+Essa pasta raiz deve ser criada dentro do diretório base selecionado
+Exemplo de entrada:
+Nome do Projeto: SistemaPedidos
+Diretório Base: D:/MeusProjetos
+Subpastas:
+frontend
+backend
+database
+docs
+Estrutura esperada:
+
+javascript
+D:/MeusProjetos/SistemaPedidos/
+├── frontend/
+├── backend/
+├── database/
+└── docs/
+❌ Problema 2 – Campo “Tipo de Projeto” é travado
+
+O campo “Tipo de Projeto” é um QComboBox com opções fixas (ex: React, Node), sem permitir digitação de novos tipos.
+
+✅ Correção esperada:
+O QComboBox deve continuar exibindo opções padrão como:
+React, Node.js, Python, HTML/CSS/JS, Outro
+Mas também deve ser editável para permitir que o usuário digite manualmente qualquer outro tipo (ex: Flutter, Rust, Electron etc.)
+Esse tipo definido pelo usuário será incluído como metadado ou estrutura da pasta se necessário
+Extras recomendados (mas opcionais):
+Exibir feedback ao final (“Projeto criado com sucesso em: ...”)
+Se o projeto já existir, perguntar se deseja sobrescrever, abrir ou cancelar
+
+----------------------------------------------
+Correção do Painel Principal
+Corrija o painel principal do sistema. Atualmente ele exibe dados fictícios (placeholders),
+como exemplos genéricos de projetos, datas ou informações estáticas.
+Novo comportamento esperado:
+O painel principal deve exibir dados reais relacionados ao uso do sistema pelo usuário,
+puxando as informações dinâmicas do próprio sistema.
+
+FAÇA AS ATUALIZAÇÕES E CORREÇÕES NECESSÁRIA APENAS DAS NOVAS FUNÇÕES E OU ATUALIZAÇÕES, SEM REESCEVER O SISTEMA COMPLETO.
